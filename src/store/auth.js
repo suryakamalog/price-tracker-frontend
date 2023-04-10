@@ -14,17 +14,11 @@ const authSlice = createSlice({
       state.isAuthenticated = true;
       state.access_token = actions.payload.access;
       state.refresh_token = actions.payload.refresh;
-      // localStorage.setItem('access_token', actions.payload.access)
-      // localStorage.setItem('refresh_token', actions.payload.refresh)
-      // localStorage.setItem('isAuthenticated', true)
     },
     logout(state) {
       state.isAuthenticated = false;
       state.access_token = "";
       state.refresh_token = "";
-      // localStorage.setItem('access_token', "")
-      // localStorage.setItem('refresh_token', "")
-      // localStorage.setItem('isAuthenticated', false)
     }
   },
 });
