@@ -49,12 +49,12 @@ const ProductList = () => {
             },
           }
         );
-        setProducts(products.filter((product) => product.pk !== id));
       } catch (err) {
         console.log(err);
       }
     };
     deleteProduct(id);
+    setProducts(products.filter((product) => product.pk !== id));
   };
 
   const searchProductHandler = (e) => {
